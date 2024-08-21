@@ -3,14 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
-const CreateBook = () => {
+const AddBook = () =>
+{
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [description, setDescription] = useState('');
   const [year, setYear] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) =>
+  {
     e.preventDefault();
     try
     {
@@ -20,58 +22,58 @@ const CreateBook = () => {
     }
     catch (error)
     {
-      console.error('Error al crear el libro:', error);
+      console.error('Error to add the book:', error);
     }
   };
 
   return (
-    <div className="crear-hechizo">
-      <h2>Crear Libro</h2>
+    <div className="add-book">
+      <h2>Add Book</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="nombre">Titulo</label>
+          <label htmlFor="title">Title</label>
           <input
             type="text"
-            id="nombre"
+            id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="nombre">Author</label>
+          <label htmlFor="author">Author</label>
           <input
             type="text"
-            id="autor"
+            id="author"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="descripcion">Descripción</label>
+          <label htmlFor="description">Description</label>
           <textarea
-            id="descripcion"
+            id="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="nivel">Year</label>
+          <label htmlFor="year">Year</label>
           <input
             type="text"
-            id="nivel"
+            id="year"
             value={year}
             onChange={(e) => setYear(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Crear</button>
+        <button type="submit">ADD</button>
       </form>
     </div>
   );
 };
 
 
-export default CreateBook;
+export default AddBook;

@@ -1,14 +1,14 @@
-// import './Footer.css';
+import './Footer.css';
 
 
-function Footer()
+const Footer = () =>
 {
-  return(
+  return (
     <footer className="footer"> 
-      <p> Derechos de autor © 2024 Alejandro Osorio</p>
+      <p> All Rights Reserved © 2024 Alejandro Osorio</p>
     </footer>
-  )
-}
+  );
+};
 
 
 export default Footer;

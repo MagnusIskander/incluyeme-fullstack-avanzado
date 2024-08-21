@@ -1,18 +1,18 @@
 import './Button.css';
 
 
-function Button(props)
+const Button = (props) =>
 {
   const styles = {
     backgroundColor: props.color,
   }
   
-  return(
+  return (
     <div> 
-      <button style={styles} onClick={props.onClick} className='button'> {props.texto} </button>
+      <button style={styles} onClick={props.onClick} className='button'> {props.text} </button>
     </div>
-  )
-}
+  );
+};
 
 
 export default Button;

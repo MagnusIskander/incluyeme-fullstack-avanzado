@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-const BooksList = () => {
+const BooksList = () =>
+{
   const [books, setBooks] = useState([]);
 
-  useEffect(() => {
-    const fetchBooks = async () => {
+  useEffect(() =>
+  {
+    const fetchBooks = async () =>
+    {
       try
       {
         const response = await axios.get('http://localhost:8000/api/books');
@@ -15,7 +18,7 @@ const BooksList = () => {
       }
       catch (error)
       {
-        console.error('Error al obtener los libros:', error);
+        console.error('Error to get the book list:', error);
       }
     };
 
@@ -24,14 +27,16 @@ const BooksList = () => {
 
   return (
     <div>
-      <h1>Lista de Libros</h1>
-      <Link to="/create-book" className="crear-libro">Crear nuevo Libro</Link>
+      <h1>Book List</h1>
+      <Link to="/create-book" className="add-book">Add Book</Link>
       <ul>
-        {books.map((book) => (
-          <li key={book._id}>
-            {book.title} - <Link to={`/books/${book._id}`}>Ver Detalle</Link>
-          </li>
-        ))}
+        {books.map((book) =>
+          (
+            <li key={book._id}>
+              {book.title} - <Link to={`/books/${book._id}`}>VIEW DETAIL</Link>
+            </li>
+          )
+        )}
       </ul>
     </div>
   );
