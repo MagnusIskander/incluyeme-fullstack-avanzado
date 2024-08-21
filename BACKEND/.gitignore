@@ -7,7 +7,7 @@ logs
 npm-debug.log*
 
 # Environment variables
-# .env
+.env
 
 # Dependency directories
 jspm_packages/
