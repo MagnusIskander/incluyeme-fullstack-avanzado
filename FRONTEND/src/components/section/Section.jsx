@@ -11,7 +11,7 @@ const Section = () =>
   return (
   <section className="section">
 
-    <h2> Story of Books </h2>
+    <h2> Store of Books </h2>
     <p> Books are... </p>
     <img src={mainCover} alt="Book cover as main image" />
 
