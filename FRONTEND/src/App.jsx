@@ -8,6 +8,7 @@ import BooksList from './components/books/BooksList';
 import BookDetail from './components/books/BookDetail';
 import AddBook from './components/books/AddBook';
 import EditBook from './components/books/EditBook';
+import Library from './components/library/Library';
 
 
 const App = () =>
@@ -16,11 +17,12 @@ const App = () =>
     <Router>
       
       <div className="container">
+        
+        <Menu />
       
         <Header />
 
-        <Menu />
-        
+      
         <main>
           
           <Routes>
@@ -30,6 +32,7 @@ const App = () =>
             <Route path="/create-book" element={<AddBook />} />
             <Route path="/books/:id" element={<BookDetail />} />
             <Route path="/edit-book/:id" element={<EditBook />} />
+            <Route path="/library" element={<Library />} />
 
           </Routes>
 

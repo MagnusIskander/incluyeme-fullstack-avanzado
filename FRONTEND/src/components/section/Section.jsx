@@ -15,10 +15,6 @@ const Section = () =>
     <p> Books are... </p>
     <img src={mainCover} alt="Book cover as main image" />
 
-    <Button color="pink" text="Read more" onClick={buttonHandleClick} />
-
-    <Button className="button" text="Buy" onClick={buttonHandleClick} />
-
   </section>
   );
 };

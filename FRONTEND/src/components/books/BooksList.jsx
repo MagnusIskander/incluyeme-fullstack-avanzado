@@ -33,7 +33,7 @@ const BooksList = () =>
         {books.map((book) =>
           (
             <li key={book._id}>
-              {book.title} - <Link to={`/books/${book._id}`}>VIEW DETAIL</Link>
+              {book.title} - <Link to={`/books/${book._id}`} className="link">VIEW DETAIL</Link>
             </li>
           )
         )}
